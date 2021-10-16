@@ -37,4 +37,12 @@ class StringCalculatorShould {
     	
     	assertEquals(25, stringCalculator.add("2,3,4,6,10"));
     }
+    
+    @Test
+    void string_having_new_line_character_should_be_accepted()
+    {
+    	StringCalculator stringCalculator = new StringCalculator();
+    	
+    	assertEquals(25, stringCalculator.add("2,3\n4,6\n10"));
+    }
 }

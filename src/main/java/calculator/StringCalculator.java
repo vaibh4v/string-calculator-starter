@@ -11,7 +11,7 @@ class StringCalculator
     	}
     	else if(input.contains(","))
     	{
-    		String[] tokens = input.split(",");
+    		String[] tokens = input.split(",|\n");
     		
     		int sum = 0;
     		
