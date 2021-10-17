@@ -1,8 +1,8 @@
 package calculator;
 
-import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
 
 class StringCalculatorShould {
 
@@ -44,5 +44,21 @@ class StringCalculatorShould {
     	StringCalculator stringCalculator = new StringCalculator();
     	
     	assertEquals(25, stringCalculator.add("2,3\n4,6\n10"));
+    }
+    
+    @Test
+    void string_having_different_delimiter_should_be_accepted()
+    {
+    	StringCalculator stringCalculator = new StringCalculator();
+    	
+    	assertEquals(2, stringCalculator.add("//;\n1;1"));
+    }
+    
+    @Test
+    void string_having_different_delimiter_mixed_with_newline_should_be_accepted()
+    {
+    	StringCalculator stringCalculator = new StringCalculator();
+    	
+    	assertEquals(5, stringCalculator.add("//;\n1;1\n1;1\n1"));
     }
 }
