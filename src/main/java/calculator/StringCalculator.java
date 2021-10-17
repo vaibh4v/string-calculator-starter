@@ -15,6 +15,8 @@ class StringCalculator
 		{
 			delimiter = inputString.substring(2, 3);
 			
+			// concatenating a newline character so that 
+			// it will also be treated as a valid delimiter
 			delimiter = delimiter.concat("|\n");
 			
 			inputWithoutDelimiterInfo = inputString.substring(4);
